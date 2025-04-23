@@ -1,8 +1,8 @@
 import React from "react";
-import { Control, FieldValues, useController, useFormContext } from "react-hook-form";
+import { Control, FieldValues, useController } from "react-hook-form";
 
 type ControlledInputProps = {
-  control: Control<FieldValues, any, FieldValues>;
+  control: Control<FieldValues, unknown, FieldValues>;
   name: string;
   label: string;
   type?: string;
