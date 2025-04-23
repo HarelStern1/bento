@@ -8,10 +8,9 @@ export const OrderCakeForm = () => {
   const methods = useForm();
 
   const { step, isFirstStep, isLastStep, nextStep, prevStep } = useMultiStep(2);
-  const { mutate: submitCakeOrder, isPending, isSuccess, isError } = useSubmitCakeOrder();
+  const { mutate: submitCakeOrder } = useSubmitCakeOrder();
 
-  const onSubmit = (data: any) => {
-    console.log(data);
+  const onSubmit = () => {
     submitCakeOrder({
       summary: "Test Event 🎉",
       description: "Created from my Next.js app",

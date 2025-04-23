@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const useMultiStep = (steps: number) => {
   const [step, setStep] = useState(0);

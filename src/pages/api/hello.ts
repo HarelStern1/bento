@@ -41,8 +41,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       eventId: response.data.id,
       htmlLink: response.data.htmlLink,
     });
-  } catch (error: any) {
-    console.error("❌ Error creating event:", error.message, error.response?.data || error);
-    return res.status(500).json({ message: "Failed to create event", error: error.message });
+  } catch (error) {
+    console.error("❌ Error creating event:", error);
+    return res.status(500).json({ message: "Failed to create event", error });
   }
 }
